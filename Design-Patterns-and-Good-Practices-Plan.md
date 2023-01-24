@@ -224,9 +224,12 @@ interface:
         - base type = parent class
         - derived class = child class
     - *Interface Segregation*
-      - instead of having one interface with all the methods the concrete classes will implement, have several that split up the methods into smaller interfaces
+      - instead of having one interface with all the methods the concrete classes must implement, have several interfaces and split up the methods across those interfaces, making each interface smaller
         - subclasses can implement and indefinite number of interfaces
       - a class should not be forced to depend on methods it does not use
+      - bad: one interface with 20 methods, because a class that implements that interface must provide implementations (code) for all 20 methods, even if it only wants to use three of those 20 methods
+      - better: for example, 10 interfaces each with two methods
+        - the developer can choose to have a class implement several interfaces at a time, thereby selectively choosing which of the 20 methods it wants to implement and which of the 20 it wants to ignore
     - *Dependency Inversion*
       - suppose a given class wants to use certain dependent objects. This class should receive these dependencies "from the outside" and should not also have the job of creating these dependencies itself
       - initially: high-level classes depend on lower-level classes
