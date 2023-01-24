@@ -223,6 +223,7 @@ interface:
         - Invariants are conditions in which an object makes sense
         - base type = parent class
         - derived class = child class
+      - another explanation: https://stackify.com/solid-design-liskov-substitution-principle/
     - *Interface Segregation*
       - instead of having one interface with all the methods the concrete classes must implement, have several interfaces and split up the methods across those interfaces, making each interface smaller
         - subclasses can implement and indefinite number of interfaces
