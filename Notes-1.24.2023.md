@@ -22,7 +22,7 @@ Composition:
 - objects can be comprised/composed of other objects
 
 
-problem: nheritance can lead to combinatorial explosion
+problem: inheritance can lead to combinatorial explosion
 - in car and truck example:
   - car, truck
   - manual, autopilot
