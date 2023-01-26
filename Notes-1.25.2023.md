@@ -1,4 +1,3 @@
-start:
-plain text ==> encoding ==> compression
+#### Decorator pattern code example `DecoratorDemo.java`
 
-decompression ==> decoding ==> plain text
+plain text (inner object) ==> encoding wrapper ==> compression wrapper
