@@ -226,7 +226,7 @@ interface:
       - another explanation: https://stackify.com/solid-design-liskov-substitution-principle/
     - *Interface Segregation*
       - instead of having one interface with all the methods the concrete classes must implement, have several interfaces and split up the methods across those interfaces, making each interface smaller
-        - subclasses can implement and indefinite number of interfaces
+        - subclasses can implement an indefinite number of interfaces
       - a class should not be forced to depend on methods it does not use
       - bad: one interface with 20 methods, because a class that implements that interface must provide implementations (code) for all 20 methods, even if it only wants to use three of those 20 methods
       - better: for example, 10 interfaces each with two methods
@@ -235,3 +235,4 @@ interface:
       - suppose a given class wants to use certain dependent objects. This class should receive these dependencies "from the outside" and should not also have the job of creating these dependencies itself
       - initially: high-level classes depend on lower-level classes
         - instead, have a high-level class depend on an interface and make the low-level classes implement (depend on) that interface
+      - this theme pops up everywhere in modular and flexible software design: instead of having two classes be dependent on one another (or just a one-way dependency), in this case a high-level class depending on a low-level class, put an interface between them so they're not tightly coupled
